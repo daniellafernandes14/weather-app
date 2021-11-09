@@ -6,7 +6,8 @@ const temperature = document.getElementById('temperature');
 const form = document.getElementById('form');
 
 // default weather
-fetch(`https://api.openweathermap.org/data/2.5/weather?q=london&appid=262ebc10fcbdb48d141acf5027dce0ad`)
+const key = config.API_KEY;
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=london&appid=${key}`)
   .then(response => response.json())
   .then((data) => {
     console.log(data);
@@ -23,7 +24,7 @@ const fetchWeather = () => {
     e.preventDefault();
     const query = document.getElementById('query').value;
     console.log(query);
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=262ebc10fcbdb48d141acf5027dce0ad`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${key}`)
       .then(response => response.json())
       .then((data) => {
         console.log(data);
