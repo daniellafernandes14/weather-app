@@ -1,3 +1,8 @@
-body {
-  background-image: url("https://source.unsplash.com/1600x900/?")
+.card-body {
+  text-align: center;
+  background-color: rgba(250,250,250,0.5);
+}
+
+#temperature-icon {
+  justify-content: center;
 }
